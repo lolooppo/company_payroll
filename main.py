@@ -1,4 +1,31 @@
-# In practice, classes sure have more logic.
+"""
+Payroll & Invoice Management System 🧾💰
+
+Author: Alaa Omran
+Date: 10/9/2025
+
+This project demonstrates Object-Oriented Programming (OOP) in Python through a simplified
+company payroll and invoice management system. It models:
+
+- Staff & Employees: different employee types (hourly, salaried, commission-based, volunteers)
+- Items & Invoices: purchasable items (books, food) and invoice validation with customizable rules
+- Validation Rules: abstract & concrete classes for tax checks, supplier deals, etc.
+- Payroll: unified interface to calculate and represent all payables (employees + invoices)
+- Company: aggregates payroll and populates sample data
+
+Main features:
+- Inheritance & polymorphism for staff types
+- Abstract base classes for validation rules
+- Encapsulation of payroll & invoice logic
+- Operator overloading (__lt__, __repr__) for sorting and pretty-printing
+- Flexible invoice validation with mandatory or complete rule sets
+
+Run this script directly to see a sample company payroll summary and total amount to pay.
+"""
+
+
+
+
 from abc import ABC, abstractmethod
 
 
@@ -212,4 +239,5 @@ if __name__ == '__main__':
     company.fill_data(True)  # Try with True
 
     print(company.payroll)
+
     print(company.payroll.amount_to_pay)  # 11840
